@@ -1,0 +1,239 @@
+@charset "utf-8";
+/*resetCSS*/
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align:baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+p{
+  line-height:1.65;
+}
+article, header, footer, aside, figure, figcaption, nav, section {
+  display:block;
+}
+body {
+  line-height:1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+    background: #fff;
+    color: #333;
+    font-family: 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color:#333;
+}
+
+/*******共通******/
+
+.inner{
+width:980px;
+max-width:100%;
+margin:0 auto;
+}
+.flex {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  justify-content: space-between;
+}
+.mb-100{
+    margin-bottom:100px;
+}
+/* ナビ */
+header{
+background-color:#FFBD4C;
+}
+header .flex{
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  height:60px;
+}
+.menu ul li{
+  display:inline-block;
+  margin-left: 20px;
+}
+.menu ul li a{
+  color: #fff;
+}
+.logo a{
+  font-weight: bold;
+  color: #fff;
+  font-size: 24px;
+}
+/* トップ画像 */
+
+.hero{
+  position: relative;
+  height: 0;
+  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+  padding-top: 36.34%;
+  background: url(../img/top-img.jpg) 0 0 no-repeat;
+  background-size: contain;
+}
+.hero-content{
+  position: absolute;
+  top: 50%; left:50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  display:inline-block;
+  text-align:center;
+}
+.hero-content h2{
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+}
+/*サイトタイトル */
+.site-title{
+  margin-bottom:60px;
+}
+.site-title h1{
+  text-align: center;
+  color:#EA5331;
+  font-size:48px;
+  font-weight: bold;
+}
+
+/* ３カラムのsection1 */
+.about-box{
+  width:280px;
+}
+
+.about-box img{
+  margin-bottom:14px ;
+}
+
+.about-box h3{
+  font-weight: bold;
+  color:#EA5331;
+  font-size: 22px;
+  text-align:center;
+  margin-bottom: 14px;
+}
+
+/* ２カラムのsection2 */
+
+.content-img img{
+  margin-left: 30px;
+}
+.content-img2 img{
+  margin-right: 30px;
+}
+.content-text h2{
+font-size: 28px;
+padding-bottom:15px;
+margin-bottom: 28px;
+border-bottom: 3px solid #FFB797;
+color:#EA5331;
+font-weight: bold;
+}
+.content-text p{
+  margin-bottom: 28px;
+}
+.content-text a{
+  display:inline-block;
+  padding:10px 20px;
+  border:2px solid #EA5331;
+  border-radius: 50px;
+  color:#EA5331;
+  font-weight: bold;
+}
+.content-1:nth-child(odd){
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction:row-reverse;
+}
+.btn-right{
+  text-align:right;
+}
+/* フッター */
+#footer {
+  background:#FFBD4C;
+}
+footer .flex{
+  align-items: center;
+  height:45px;
+}
+.copy {
+  font-size: 12px;
+  margin: 0 auto;
+  color:#fff;
+}
+
+/* レスポンシブ タブレット〜pc */
+
+@media (max-width:979px){
+  .inner{
+    padding:0 15px;
+  }
+  .about1 .flex{
+    -webkit-box-orient: vertical;
+  	-webkit-box-direction: normal;
+  	-ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .about-box{
+    width:70%;
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+  }
+}
+/* レスポンシブ スマホ〜タブレット */
+@media (max-width:767px){
+  .site-title h1{
+    font-size: 30px;
+  }
+  .hero-content h2{
+    font-size: 40px;
+  }
+  .about-box{
+    width:100%;
+    text-align: center;
+  }
+  .about1 .flex,.about2 .flex{
+    -webkit-box-orient: vertical;
+  	-webkit-box-direction: normal;
+  	-ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .about-box{
+    margin-bottom: 40px;
+  }
+  .content-img img,.content-img2 img{
+    width:100%;
+    margin:0 0 20px;
+  }
+  .content-text {
+    text-align:center;
+  }
+  .btn-right{
+    text-align:center;
+  }
+  .content-text a{
+  width: 90%;
+  }
+  .menu ul li{
+    margin-left: 10px;
+  }
+}
