@@ -167,12 +167,19 @@ font-weight: bold;
   margin-bottom: 28px;
 }
 .content-text a{
-  display:inline-block;
-  padding:10px 20px;
-  border:2px solid #9c7f2a;
-  border-radius: 50px;
-  color:#9c7f2a;
-  font-weight: bold;
+
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #9c7f2a;
+    border: double 4px #9c7f2a;
+   
+    transition: .4s;
+   font-weight: bold;
+  
+}
+.content-text a:hover{
+  opacity: 0.6;
 }
 .content-1:nth-child(odd){
   -webkit-box-orient: horizontal;
